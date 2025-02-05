@@ -26,7 +26,7 @@ function getColumnRenderValue(data: any) {
     o.children = getChildren(data);
   }
   // 混合react节点和属性
-  if (data.children) {
+  if (data.children || data.children==0) {
     if (typeof data.children === 'object') {
       o.children = getChildren(data.children);
     } else {
